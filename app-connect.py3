@@ -1103,6 +1103,7 @@ def app_publish_msg(app, topic, msg):
 
 def app_publish_http(app, path, msg, retain=False):
     logging.debug("POST to '%s'", path)
+    path = "/core" + path
     headers = {"Content-type": "application/json", "Accept": "text/plain"}
 
     data = None
